@@ -1,0 +1,149 @@
+@WhiteColor:#fff;
+@colorBlue: #00a8ff;
+//上部导航样式
+//清除元素原有样式
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-inverse{
+    margin:0;
+    .navbar-brand{
+        color: @WhiteColor;
+        font-size: 20px;
+    }
+
+    .navbar-nav>li>a {
+        color: @WhiteColor;
+        &:hover{
+            color:@colorBlue;
+            text-decoration: underline;
+        }
+    } 
+}
+
+//下部导航样式
+.navbar-default{
+    margin-bottom: 0;
+}
+.navbar-default .navbar-nav > li > a{
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+
+    &:hover{
+        background-color: #efeeee;
+        color: @colorBlue;
+    }
+}
+.tooltip img{
+    width: 100px;
+}
+
+//投资方式
+.feature{
+    &>div{
+        &>div{
+            padding-left: 70px;
+            height: 100px; 
+            background: url("../../../image/feature01.png") no-repeat left center;
+            h3{
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+        } 
+        &>div:nth-child(2){
+            background-image: url("../../../image/feature02.png");
+        }
+        &>div:nth-child(3){
+            background-image: url("../../../image/feature03.png");
+        }
+    }
+}
+
+//借钱
+.BorrowMoney{
+    hr{
+        margin: 0;
+    }
+    h2{
+        display: inline-block;
+        margin: 0px;
+        margin-top: 20px;
+        border-bottom: 5px solid @colorBlue;
+        font-weight: bold;
+        color:@colorBlue;
+        font-size: 23px;
+    }
+    a{
+        font-size: 16px; 
+        margin-top: 25px;
+    }
+    table thead th:nth-child(7n),tbody td:nth-child(7n){
+        text-align: right;
+        button{
+            color: #fff;
+            background: #d9534f;
+            border: none;
+            width: 50px;
+            height: 30px;
+        }
+    }
+}
+
+// 资讯
+.message div{
+    hr{
+        margin: 0;
+    }
+    h2{
+        display: inline-block;
+        margin: 0px;
+        margin-top: 20px;
+        border-bottom: 5px solid @colorBlue;
+        font-weight: bold;
+        color:@colorBlue;
+        font-size: 23px;
+    }
+    a{
+        font-size: 16px; 
+        margin-top: 26px;
+    }
+    table tbody td:nth-child(2n){
+        text-align: right;
+        button{
+            color: #fff;
+            background: #d9534f;
+            border: none;
+            width: 50px;
+            height: 30px;
+        }
+    }
+}
+
+// 页脚
+.footer{
+    margin-top: 30px;
+}
+.footer .row {
+   .col-sm-4, .col-sm-8{
+        height: 206px;
+        box-sizing: border-box;
+        padding: 0;
+        margin:0;
+        .panel-default{
+            border: none;
+        }
+        .panel-body{
+             padding: 10px;
+            
+        }
+   }
+   .col-sm-2 {
+       img{
+           width: 80%;
+           margin-bottom: 20px;
+       }
+   } 
+}
