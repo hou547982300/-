@@ -12,81 +12,11 @@
 
 <body>
   <!-- 头部导航 -->
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-phone-alt"></span> 028-86261949</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#">首页</a>
-          </li>
-          <li>
-            <a href="#">小强</a>
-          </li>
-          <li>
-            <a href="#">注销</a>
-          </li>
-          <li>
-            <a href="#">帮助</a>
-          </li>
-          <li>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" data-html='true' title="<img src='./image/wx.jpg'>">联系客服</a>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-
-
-
+  <?php
+    require("./header.php");
+  ?>
   <!-- 下部导航 -->
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img src="./image/logo.png" alt=""> </a>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="#">首页
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">我要投资</a>
-        </li>
-        <li>
-          <a href="#">我要借款</a>
-        </li>
-        <li>
-          <a href="#">新手指引</a>
-        </li>
-        <li>
-          <a href="#">关于我们</a>
-        </li>
-      </ul>
-
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
+  
 
   <!-- 轮播图 -->
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -155,10 +85,10 @@
       <thead>
         <tr>
           <th>借款人</th>
-          <th>借款标题</th>
+          <th class="hideTile">借款标题</th>
           <th>年利率</th>
-          <th></th>
-          <th>还款方式</th>
+          <th>金额</th>
+          <thclass="hideTile">还款方式</th>
           <th>进度</th>
           <th>操作</th>
         </tr>
@@ -166,10 +96,10 @@
       <tbody>
         <tr>
           <td>张三</td>
-          <td>给我2000度过难关</td>
+          <td  class="hideTile">给我2000度过难关</td>
           <td>10.00%</td>
           <td>2,000.00</td>
-          <td>按月分期还款</td>
+          <td  class="hideTile">按月分期还款</td>
           <td>78.00%</td>
           <td>
             <button>查看</button>
@@ -177,10 +107,10 @@
         </tr>
         <tr>
           <td>王五</td>
-          <td>江湖救急，借100吃饭</td>
+          <td  class="hideTile">江湖救急，借100吃饭</td>
           <td>12.00%</td>
           <td>100.00</td>
-          <td>按月到期还款</td>
+          <td  class="hideTile">按月到期还款</td>
           <td>100.00%</td>
           <td>
             <button>查看</button>
@@ -188,10 +118,10 @@
         </tr>
         <tr>
           <td>赵柳</td>
-          <td>江湖救急，借100吃饭</td>
+          <td  class="hideTile">江湖救急，借100吃饭</td>
           <td>12.00%</td>
           <td>100.00</td>
-          <td>按月到期还款</td>
+          <td  class="hideTile">按月到期还款</td>
           <td>100.00%</td>
           <td>
             <button>查看</button>
@@ -327,51 +257,32 @@
   </div>
 
   <!-- 页脚 -->
-  <div class="container footer">
+  <!-- <div class="footer">
+     <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-8 ">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            版权所有： 2006-2015成都源代码教育咨询有限公司
-          </div>
-          <div class="panel-body">
-            地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625
-          </div>
-          <div class="panel-body">
-            电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn
-          </div>
-          <div class="panel-body">
+        <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+        <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625 </p> 
+        <p>电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn </p> 
+        <p>
             <a href="">蜀ICP备14030149号-1</a>
-            <a href="">蜀公网安备510114990541</a>
-          </div>
+            <a href=""> 蜀公网安备510114990541</a> 
+        </p> 
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-2 ">
+      <div class="col-xs-6 col-sm-2">
         <p>官场微博:</p>
-        <img src="./image/tecent.png">
-        <img src="./image/sina.png">
+        <p><img src="./image/tecent.png"  class="img-responsive"></p>
+        <p><img src="./image/sina.png"  class="img-responsive"></p>
       </div>
-      <div class="col-xs-12 col-sm-2 ">
+      <div class="col-xs-6 col-sm-2">
         <p>官场微信:</p>
-        <img src="./image/wx.jpg">
+        <p><img src="./image/wx.jpg"  class="img-responsive"></p>
       </div>
     </div>
-
-  </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
+  </div> -->
+  <?php
+     require("./footer.php");
+  ?>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./dist/js/index.min.js"></script>

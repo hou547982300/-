@@ -1,0 +1,41 @@
+//上部导航样式   下部导航样式
+@import url("./header.less");
+//下部导航栏样式
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #337ab7;
+    font-size: 22px;
+    background: none;
+    font-weight: bolder;
+}
+//注册栏
+.register{
+    margin-top: 20px;
+    .form-horizontal{
+        width: 40%;
+        margin: 0 auto;
+        .form-group{
+            margin-bottom: 20px;
+        }
+    }
+    .mobileNum{
+       span{
+           display: inline-block;
+           width: 37%;
+           height: 35px;
+           line-height: 35px;
+           background: #ccc;
+           text-align: center;
+           margin-left: 2%;
+           font-size: 12px;
+           padding: 0;
+           border: 1px solid #ccc;
+       } 
+    }
+    // 马上登录
+    .login{
+       margin-top:5px;
+    }
+}
+
+//页脚
+@import url("./footer.less");
