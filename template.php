@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>P2P-xxx</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
+    <link rel="stylesheet" href="./dist/css/minCss/template.min.css">
 </head>
 <body>
         <?php
@@ -25,6 +25,5 @@
     ?>
      <script src="./lib/jquery/jquery.min.js"></script>
      <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-     <script src="./dist/css/minCss/commonStyle.min.css"></script>
 </body>
 </html>
