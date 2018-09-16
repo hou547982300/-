@@ -101,12 +101,14 @@ $(function () {/* 文档加载，执行一个函数*/
                     }
                 }
             },
-            isChecked:{
-                type: 'size',
-                min:1,
-                max:1,
-                onerror: 'test',
-                defaultvalue:"test"
+            'isAgree[]':{
+                validators: {
+                    choice: {
+                        min: 1,
+                        max: 1,
+                        message: '是否已阅读协议书',
+                        }
+                }
             },
         }
     }) 
@@ -122,11 +124,16 @@ $(function () {/* 文档加载，执行一个函数*/
             var bv = $form.data('bootstrapValidator');
 
             // Use Ajax to submit form data 提交至form标签中的action，result自定义
-            $.post($form.attr('action'), $form.serialize(), function (result) {
-                //do something...
-                // alert('验证成功');
-                console.log(result);
-                // location.href="../../registerInfo.php";
+            $.post($form.attr('action'), $form.serialize(), function (data) {
+                //判断注册状态
+                var data = JSON.parse(data);
+                console.log(data);
+                if(data.isStatus){
+                    alert(data.message);
+                    location.href="./Login.php";
+                }else{
+                    alert(data.message);
+                }
             });
         });
 

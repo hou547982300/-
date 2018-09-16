@@ -45,7 +45,7 @@
           <h3 class="panel-title">用户注册</h3>
         </div>
         <div class="panel-body">
- <form class="form-horizontal" id='register' action="/registerInfo.php"  method="POST">
+ <form class="form-horizontal" id='register' action="./api/registerInfo.php"  method="POST">
    <!-- 用户名 -->
     <div class="form-group">
       <label for="inputEmail3" class="col-sm-3 control-label" >用户名:</label>
@@ -89,7 +89,7 @@
       <div class="col-sm-offset-3 col-sm-9">
         <div class="checkbox">
           <label>
-            <input type="checkbox" name="isChecked" ><a href="">我已阅读协议书</a>
+            <input type="checkbox" name="isAgree[]" value="1" class="isAgree" ><a href="">我已阅读协议书</a>
           </label>
         </div>
       </div>

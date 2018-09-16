@@ -1,4 +1,4 @@
-$(function(){/* 文档加载，执行一个函数*/
+$(function () {/* 文档加载，执行一个函数*/
     $('#loginCheck').bootstrapValidator({
         message: '未能成功匹配到该用户',
         feedbackIcons: {/*input状态样式图片*/
@@ -9,7 +9,6 @@ $(function(){/* 文档加载，执行一个函数*/
         fields: {/*验证：规则*/
             username: {//验证input项：验证规则
                 message: '用户名验证失败',
-               
                 validators: {
                     notEmpty: {//非空验证：提示消息
                         message: '用户名不能为空'
@@ -41,7 +40,7 @@ $(function(){/* 文档加载，执行一个函数*/
                 }
             },
             password: {
-                message:'密码无法验证',
+                message: '密码无法验证',
                 validators: {
                     notEmpty: {
                         message: '密码不能为空'
@@ -61,22 +60,42 @@ $(function(){/* 文档加载，执行一个函数*/
                     }
                 }
             }
-          
+
         }
     })
-    .on('success.form.bv', function(e) {//点击提交之后
-        // Prevent form submission
-        e.preventDefault();
+        .on('success.form.bv', function (e) {//点击提交之后
+            // Prevent form submission
+            e.preventDefault();
 
-        // Get the form instance
-        var $form = $(e.target);
+            // Get the form instance
+            var $form = $(e.target);
 
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
 
-        // Use Ajax to submit form data 提交至form标签中的action，result自定义
-        $.post($form.attr('action'), $form.serialize(), function(result) {
-//do something...
-});
-    });
+            // Use Ajax to submit form data 提交至form标签中的action，result自定义
+            $.post($form.attr('action'), $form.serialize(), function (data) {
+                var data =JSON.parse(data);
+                if(data.isStatus){
+                    
+                    // alert(data.message);
+                    var time =5;
+                    var counTime = setInterval(function(){
+                        $("#myContent").html('<span class="glyphicon glyphicon-ok"></span><span>登录成功，页面将在'+time+'秒后跳转<span> <a href="./perCenter.php">立即跳转</a>');
+                        $('#myModal').modal('show');
+                        time--;
+                        if(time==0){
+                            clearInterval(counTime);
+                            //跳转页面
+                            location.href="./perCenter.php"; 
+                        }
+                    },1000);
+                }else{
+                    $("#myContent").html('<span class="glyphicon glyphicon-remove"></span><span>登录失败，请重新登录</span>');  
+                    $('#myModal').modal('show'); 
+                }
+                //do something... 
+               
+            });
+        });
 }); 

@@ -43,7 +43,7 @@
           <h3 class="panel-title">用户登录</h3>
         </div>
         <div class="panel-body">
- <form class="form-horizontal" id="loginCheck">
+ <form class="form-horizontal" id="loginCheck" method="POST" action='./api/checkLogin.php'>
    <!-- 用户名 -->
     <div class="form-group">
       <label for="inputEmail3" class="col-sm-3 control-label" >用户名:</label>
@@ -64,13 +64,33 @@
         <button type="submit" class="btn btn-success">登 录</button>
       </div>
       <div class="col-sm-4 col-xs-12 login">
-        <a href="">新用户，马上注册</a>
+        <a href="./register.php">新用户，马上注册</a>
       </div>
     </div>
     </form>
     </div>
     </div>
   </div>
+
+  <!-- 模态框 -->
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">登录提示</h4>
+      </div>
+      <div class="modal-body" id="myContent">
+      </div>
+    </div>
+  </div>
+</div>
  
 
 
