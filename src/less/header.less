@@ -25,12 +25,16 @@
 //下部导航样式
 .navbar-default{
     margin-bottom: 0;
+    #navItem{
+        li.active{
+            background: #ccc;
+         }
+    }
 }
 .navbar-default .navbar-nav > li > a{
     line-height: 40px;
     font-size: 16px;
     text-align: center;
-
     &:hover{
         background-color: #efeeee;
         color: @colorBlue;

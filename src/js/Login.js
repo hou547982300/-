@@ -77,25 +77,24 @@ $(function () {/* 文档加载，执行一个函数*/
             $.post($form.attr('action'), $form.serialize(), function (data) {
                 var data =JSON.parse(data);
                 if(data.isStatus){
-                    
                     // alert(data.message);
+                    $("#myContent").html(`<span class="glyphicon glyphicon-ok"></span>登录成功，页面将在<span id='num'>5</span>秒后跳转 <a href="./perCenter.php">立即跳转</a>`);
                     var time =5;
                     var counTime = setInterval(function(){
-                        $("#myContent").html('<span class="glyphicon glyphicon-ok"></span><span>登录成功，页面将在'+time+'秒后跳转<span> <a href="./perCenter.php">立即跳转</a>');
-                        $('#myModal').modal('show');
                         time--;
+                        $('#num').text(time);
                         if(time==0){
                             clearInterval(counTime);
                             //跳转页面
-                            location.href="./perCenter.php"; 
+                            location.href="./perCenter.php";
                         }
                     },1000);
                 }else{
                     $("#myContent").html('<span class="glyphicon glyphicon-remove"></span><span>登录失败，请重新登录</span>');  
-                    $('#myModal').modal('show'); 
                 }
+                $('#myModal').modal('show');
                 //do something... 
                
-            });
+            }); 
         });
 }); 

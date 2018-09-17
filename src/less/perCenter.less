@@ -1,0 +1,215 @@
+@WhiteColor:#fff;
+@colorBlue: #00a8ff;
+//上部导航样式
+//清除元素原有样式
+*{
+    margin: 0;
+    padding: 0;
+}
+//页头
+@import url("./header.less");
+
+//自定义  个人中心
+.perCenter{
+    
+   margin-top: 20px;
+    .col-md-4{
+        .panel-group{
+            color: #337ab7;
+            .panel-default{
+                margin-top:-1px;
+                
+            }
+            .panel-heading{
+                background: #f6f6f6;
+                a{
+                    color: #337ab7;
+                    text-decoration: none;
+                }
+                &:hover{
+                    background:#337ab7;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+            ul li{
+                border: none;
+                font-size: 16px;
+            }
+        }
+    }
+    .col-md-8{
+        .panel-heading{
+           
+            img{
+            width: 15%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin-right: 20px;
+            }
+            div.pull-left{
+               padding-top: 1%;
+            }
+        }
+        .panel-body{
+            div{
+                margin-bottom: 10px;
+            }
+            &>div{
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 20px;
+                button{
+                    font-size: 20px;
+                }
+                .firstBtn{
+                    text-align: right;
+                    padding-right: 0;
+                }
+                .secondBtn{
+                    text-align: left;
+                    padding-right: 0;
+                }
+            
+            }
+            .authentication{
+                font-size: 13px;
+                text-align: left;
+                padding: 10px;
+                
+                .clearfix {
+                    margin: 0;
+                    img{
+                       margin-top:10px;
+                       padding-right: 10px;
+                    }
+                    div{
+                        margin: 0;
+                    }
+                }
+               .pull-right{
+                   margin-top: 0;
+               }
+            }
+
+        }
+    }
+}
+
+
+//实名认证
+#realAuth{
+    width: 65%; 
+    margin:0 auto;
+    .col-sm-3{
+        padding-left: 0; 
+        padding-right: 5px; 
+    }
+    .user{
+            padding-top: 4px;
+            font-size: 16px;
+            margin-bottom: 0;
+    } 
+    .realAuthTile{
+        text-align:center;
+        color: #a94442; 
+    } 
+    #idcardIMg{
+        p{
+            margin-top: 8px;
+            color: #337ab7;
+        }
+        div.img{
+            div{
+                display: inline-block;
+                width: 40%;
+                height: 150px;
+                border: 1px solid #ccc;
+                text-align: center;
+                margin-bottom: 0;
+            }
+           
+        }
+    }
+}
+ 
+
+//账户流水
+#accountflow_list{
+    font-size: 14px;
+     th,td{
+        text-align: center;
+    }
+}
+
+//借款项目
+#bid_request_list{
+    font-size: 14px;
+    th,td{
+        text-align: center;
+    }
+}
+
+// 信用借款
+#borrow_apply{
+    .header{
+        font-size: 14px;
+        border-left: 2px solid #00a8ff; 
+        padding: 10px;
+        background: #F4F8FA;
+        h3{
+            color: #00a8ff;
+
+        }
+        span{
+            color: #31708f;
+        }
+        i{
+            color: #00a8ff;
+            font-style: none;
+            margin-right: 50px;
+        }
+    }
+    .panel-heading{
+        background: none;
+        font-size: 16px;
+        span{
+            margin-right: 30px;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 3px;
+            &:hover{
+                color: #fff;
+                background:#337ab7;
+            }
+        }
+    }
+    .panel-body{
+        .col-md-6{
+            font-size: 14px;
+            .col-sm-3{ 
+               
+                line-height: 34px;
+                padding-left: 0;
+            } 
+        }
+        #borrow_appy_about{
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 14px;
+            padding: 20px;
+            box-shadow: 1px 1px 20px #ddd;
+            margin-left: 15px;
+            p{
+                color: #00a8ff;
+            }
+            
+        }
+        
+    }
+}
+    
+
+//页脚
+@import url("./footer.less");

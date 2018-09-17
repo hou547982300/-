@@ -16,23 +16,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#">首页</a>
-          </li>
-          <li>
-            <a href="#">小强</a>
-          </li>
-          <li>
-            <a href="#">注销</a>
+          <li id="index">
+            <a href="./index.php">首页</a>
           </li>
           <li>
             <a href="#">帮助</a>
-          </li>
-          <li>
-            <a href="./register.php">注册</a>
-          </li>
-          <li>
-            <a href="./Login.php">登录</a>
           </li>
           <li>
             <a href="#" data-toggle="tooltip" data-placement="bottom" data-html='true' title="<img src='./image/wx.jpg'>">联系客服</a>
@@ -43,3 +31,26 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script>
+    $.get('./api/checkIsLogin.php',function(data){
+        if(data.Loginstatus){
+          var domStr=`<li>
+            <a href="#">${data.username}</a>
+          </li>
+          <li>
+            <a href="./api/logout.php">注销</a>
+          </li>
+         `;
+         $("#index").after(domStr);
+        }else{
+          var domStr=`<li>
+            <a href="./Login.php">登录</a>
+          </li>
+          <li>
+            <a href="./register.php">注册</a>
+          </li>`;
+         $("#index").after(domStr);
+        }
+    },'json')
+  </script>

@@ -7,20 +7,18 @@
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
 
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="navItem">
         <li class="active">
-          <a href="#">首页
-            <span class="sr-only">(current)</span>
-          </a>
+          <a href="./index.php?menuid=1">首页</a>
         </li>
         <li>
-          <a href="#">我要投资</a>
+          <a href="./invest.php?menuid=2">我要投资</a>
         </li>
         <li>
-          <a href="#">我要借款</a>
+          <a href="./borrow.php?menuid=3">我要借款</a>
         </li>
         <li>
-          <a href="#">个人中心</a>
+          <a href="./perCenter.php?menuid=4">个人中心</a>
         </li>
         <li>
           <a href="#">新手指引</a>
@@ -33,3 +31,12 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script>
+    var c =location.href;
+    console.log("网址",c);
+    var menuid = c.split('=')[1]-1;
+    console.log("网址",menuid);
+    $("#navItem li").eq(menuid).addClass("active").siblings("li").removeClass("active");
+   
+  </script>

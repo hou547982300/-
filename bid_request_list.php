@@ -123,81 +123,34 @@
     </div>
     <div class='col-md-8 col-xs-12' >
         <div class="panel panel-default">
-            <div class="panel-heading">实名认证</div>
+            <div class="panel-heading">借款项目</div>
             <div class="panel-body">
+            <div class="bs-example" data-example-id="hoverable-table">
+      <table class="table table-hover" id="bid_request_list">
+        <thead>
+          <tr>
+            <th>标题</th>
+            <th>时间</th>
+            <th>借款金额(元)</th>
+            <th>期限</th>
+            <th>利率</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">江湖救急信</th>
+            <td>2016-01-02</td>
+            <td>2000</td>
+            <td>12月</td>
+            <td>12%</td>
+            <td>待发布 招标中 满标未审核 还款中 招标拒绝</td>
+          </tr>
+       
+        </tbody>
+      </table>
+  </div><!-- /example -->
              
-              <form class="form-horizontal" id="realAuth">
-                <!-- 用户名 -->
-                <p  class="realAuthTile">为保护您账户安全，实名认证成功之后不能修改信息，请认真填写！</p>
-                <div class="form-group" >
-                  <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-                  <div class="col-sm-9">
-                  <p class="user">小强</p>
-                  </div>
-                </div>
-
-                <!-- 姓名 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">姓名</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
-                  </div>
-                </div>
-
-                <!-- 性别 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">性别</label>
-                  <div class="col-sm-9">
-                  <select class="form-control">
-                    <option value="1">男</option>
-                    <option vule="0">女</option>
-                  </select>
-                  </div>
-                </div>
-
-                <!-- 出生日期 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">出生日期</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
-                  </div>
-                </div>
-
-                <!-- 证件地址 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">证件地址</label>
-                  <div class="col-sm-9">
-                    <textarea name="" id="" cols="30" rows="2" class="form-control"></textarea>
-                  </div>
-                </div>
-                <!-- 身份证照片 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">身份证照片</label>
-                  
-                  <div class="col-sm-9" id="idcardIMg">
-                    <p>请点击“选择图片”,选择证件的正反两面照片。</p>
-                    <div class="img">
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src=""  width="30%" class="img-rounded">
-                          </div>
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src="" width="30%" class="img-rounded">
-                          </div>
-                          <a href="#">查看样板</a>
-                    </div>
-                    
-                    
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-primary">提交认证</button>
-                  </div>
-                </div>
-              </form>
             </div>
         </div>
     </div>

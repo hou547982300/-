@@ -1,0 +1,53 @@
+@WhiteColor:#fff;
+@colorBlue: #00a8ff;
+//上部导航样式
+//清除元素原有样式
+*{
+    margin: 0;
+    padding: 0;
+}
+//页头
+@import url("./header.less");
+
+//内容区
+ .panel-default{
+     margin-top: 20px;
+     font-size: 16px;
+    .panel-heading .panel-title{
+     font-size: 22px;
+     color: #fff;
+     font-weight: bold;
+     }
+     .fristhead{
+        background: #5ece8c;
+     }
+     .secondhead{
+        background: #ec7e20;
+     }
+     .thirdhead{
+        background: #2ca2ee;
+     }
+     dl{ 
+         font-size: 14px;
+         margin: 10px 0;
+        dt{
+            color: #737373;
+        }
+        dd{
+            margin: 10px 20px;
+        }
+     }
+     .panel-body .btn{
+        border-radius: 15px;
+        width: 25%;
+        text-align: center;
+        margin:0 40%;
+     }
+ }
+   
+ 
+
+
+
+//页脚
+@import url("./footer.less");

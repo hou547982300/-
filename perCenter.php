@@ -9,8 +9,9 @@
   <title>P2P-个人中心</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./dist/css/minCss/perCenter.min.css">
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./dist/js/checkIsLogin.min.js"></script>
 </head>
-
 <body>
   <?php
         require("./header.php");
@@ -203,16 +204,11 @@
       </div>
     </div>
   </div>
-
-
-
-
-
   <!-- 页脚 -->
   <?php
         require("./footer.php");
     ?>
-  <script src="./lib/jquery/jquery.min.js"></script>
+ 
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 
 </body>

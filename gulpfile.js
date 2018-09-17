@@ -11,7 +11,7 @@ var uglify=require("gulp-uglify");
 var rename=require("gulp-rename");
 var cleanCss=require("gulp-clean-css");
 var livereload =require('gulp-livereload');
-//const babel = require('gulp-babel');
+var babel = require('gulp-babel');
 
 //配置less任务
 gulp.task("lessTask",function () {
@@ -42,9 +42,9 @@ gulp.task("sassTask",function () {
 //配置js压缩任务
 gulp.task("uglifyJS",function () {
     gulp.src('./src/js/*.js') //源文件
-        /* .pipe(babel({
+        .pipe(babel({
             presets: ['@babel/env']
-        })) */
+        }))
         .pipe(uglify()) //插件方法调用
             .pipe(rename(function (path) {
                 path.basename += ".min"; //文件名： 原来的文件名+新增的文件

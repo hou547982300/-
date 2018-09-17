@@ -122,82 +122,111 @@
       </div>
     </div>
     <div class='col-md-8 col-xs-12' >
-        <div class="panel panel-default">
-            <div class="panel-heading">实名认证</div>
-            <div class="panel-body">
-             
-              <form class="form-horizontal" id="realAuth">
-                <!-- 用户名 -->
-                <p  class="realAuthTile">为保护您账户安全，实名认证成功之后不能修改信息，请认真填写！</p>
+        <div class="panel panel-default" id="borrow_apply">
+            <div class="header">
+                <h3>信用借款</h3>
+                <div>
+                <p><span>信用额度:</span><i>2000</i> <span>可用金额:</span><i>2000</i></p>
+                </div>
+            </div>
+            <div class="panel-heading">
+             <span>借款消息</span><span>信用标</span>
+          </div>
+            <div class="panel-body row">
+              <div class="col-md-6 col-xs-12 ">
+              <form class="form-inline">
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款金额</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" id="exampleInputAmount" >
+                    <div class="input-group-addon">元</div>
+                  </div>
+                </div>
+                <!-- 利息 -->
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款利息</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" id="exampleInputAmount" >
+                    <div class="input-group-addon">%</div>
+                  </div>
+                </div>
+                <!-- 期限 -->
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款期限</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <select name="" class="form-control" id="exampleInputAmount" style="padding-left:150px;">
+                      <option value="1">1</option>
+                      <option value="3">3</option>
+                      <option value="6">6</option>
+                      <option value="9">9</option>
+                      <option value="12">12</option>
+                    </select>
+                    <div class="input-group-addon">月</div>
+                  </div>
+                </div>
+                <!-- 还款方式 -->
+                <div class="form-group" style="width:90%">
+                  <label for="inputEmail3" class="col-sm-3  col-xs-12">还款方式</label>
+                  <div class="input-group col-sm-9 col-xs-12" style="line-height:34px;text-align:left;" >
+                    <input type="checkbox" name="pay" id=""  >按月分期
+                    <input type="checkbox" name="pay" id="" style="margin-left:30px">按月到期
+                  </div>
+                </div>
+                <!-- 最小投标 -->
                 <div class="form-group" >
-                  <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-                  <div class="col-sm-9">
-                  <p class="user">小强</p>
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">最小投标</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" id="exampleInputAmount" >
+                    <div class="input-group-addon">元</div>
                   </div>
                 </div>
-
-                <!-- 姓名 -->
+                <!-- 投标奖金 -->
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">姓名</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">投标奖金</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" id="exampleInputAmount" >
+                    <div class="input-group-addon">%</div>
                   </div>
                 </div>
-
-                <!-- 性别 -->
+                <!-- 招标天数 -->
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">性别</label>
-                  <div class="col-sm-9">
-                  <select class="form-control">
-                    <option value="1">男</option>
-                    <option vule="0">女</option>
-                  </select>
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">招标天数</label>
+                <div class="input-group col-sm-9 col-xs-12">
+                    <select name="" class="form-control" id="exampleInputAmount" style="padding-left:150px;">
+                      <option value="1">1</option>
+                      <option value="3">3</option>
+                      <option value="6">6</option>
+                      <option value="9">9</option>
+                      <option value="12">12</option>
+                    </select>
+                    <div class="input-group-addon">月</div>
                   </div>
                 </div>
-
-                <!-- 出生日期 -->
+                <!-- 借款标题 -->
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">出生日期</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
-                  </div>
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款标题</label>
+                  <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" id="exampleInputAmount" >
+                    <div class="input-group-addon" style="background:none;border:none"></div>
                 </div>
-
-                <!-- 证件地址 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">证件地址</label>
-                  <div class="col-sm-9">
-                    <textarea name="" id="" cols="30" rows="2" class="form-control"></textarea>
-                  </div>
-                </div>
-                <!-- 身份证照片 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">身份证照片</label>
                   
-                  <div class="col-sm-9" id="idcardIMg">
-                    <p>请点击“选择图片”,选择证件的正反两面照片。</p>
-                    <div class="img">
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src=""  width="30%" class="img-rounded">
-                          </div>
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src="" width="30%" class="img-rounded">
-                          </div>
-                          <a href="#">查看样板</a>
-                    </div>
-                    
-                    
-                  </div>
                 </div>
-
+                <!-- 借款描述 -->
                 <div class="form-group">
-                  <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-primary">提交认证</button>
+                <label for="inputEmail3" class="col-sm-3 control-label" style="padding-right:0">借款描述</label>
+                  <div class="input-group col-sm-8">
+                      <textarea name="" id="" cols="50" rows="3" class="form-control" ></textarea>
                   </div>
                 </div>
+                <button type="submit" class="btn btn-sm btn-primary">提交申请</button>
               </form>
+              </div>
+              <div class="col-md-4 col-xs-10" id="borrow_appy_about">
+                  <h4>相关费用</h4>
+                  <p>利息<span>--</span></p>
+                  <p>奖金<span>--</span></p>
+                  <p>管理费<span>--</span></p>
+              </div>
             </div>
         </div>
     </div>

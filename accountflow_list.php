@@ -123,81 +123,41 @@
     </div>
     <div class='col-md-8 col-xs-12' >
         <div class="panel panel-default">
-            <div class="panel-heading">实名认证</div>
+            <div class="panel-heading">流水账号</div>
             <div class="panel-body">
+            <div class="bs-example" data-example-id="hoverable-table">
+      <table class="table table-hover" id="accountflow_list">
+        <thead>
+          <tr>
+            <th>发生额(￥)</th>
+            <th>账户余额(￥)</th>
+            <th>可用余额</th>
+            <th>冻结金额</th>
+            <th>发生时间</th>
+            <th>类型</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8.53</th>
+            <td>2,451.43</td>
+            <td>881.43</td>
+            <td>1,570.00</td>
+            <td>2017-05-20 16:02:34</td>
+            <td>收款</td>
+          </tr>
+          <tr>
+            <th scope="row">8.53</th>
+            <td>2,451.43</td>
+            <td>881.43</td>
+            <td>1,570.00</td>
+            <td>2017-05-20 16:02:34</td>
+            <td>收款</td>
+          </tr>
+        </tbody>
+      </table>
+  </div><!-- /example -->
              
-              <form class="form-horizontal" id="realAuth">
-                <!-- 用户名 -->
-                <p  class="realAuthTile">为保护您账户安全，实名认证成功之后不能修改信息，请认真填写！</p>
-                <div class="form-group" >
-                  <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-                  <div class="col-sm-9">
-                  <p class="user">小强</p>
-                  </div>
-                </div>
-
-                <!-- 姓名 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">姓名</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
-                  </div>
-                </div>
-
-                <!-- 性别 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">性别</label>
-                  <div class="col-sm-9">
-                  <select class="form-control">
-                    <option value="1">男</option>
-                    <option vule="0">女</option>
-                  </select>
-                  </div>
-                </div>
-
-                <!-- 出生日期 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">出生日期</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="如:张三">
-                  </div>
-                </div>
-
-                <!-- 证件地址 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">证件地址</label>
-                  <div class="col-sm-9">
-                    <textarea name="" id="" cols="30" rows="2" class="form-control"></textarea>
-                  </div>
-                </div>
-                <!-- 身份证照片 -->
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">身份证照片</label>
-                  
-                  <div class="col-sm-9" id="idcardIMg">
-                    <p>请点击“选择图片”,选择证件的正反两面照片。</p>
-                    <div class="img">
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src=""  width="30%" class="img-rounded">
-                          </div>
-                          <div>
-                            <a href="#">上传正面</a>
-                            <img src="" width="30%" class="img-rounded">
-                          </div>
-                          <a href="#">查看样板</a>
-                    </div>
-                    
-                    
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-primary">提交认证</button>
-                  </div>
-                </div>
-              </form>
             </div>
         </div>
     </div>
