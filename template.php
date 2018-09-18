@@ -8,6 +8,8 @@
     <title>P2P-xxx</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/template.min.css">
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./dist/js/checkIsLogin.min.js"></script>
 </head>
 <body>
         <?php
