@@ -3,7 +3,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 投资项目
               </a>
             </h4>
@@ -91,3 +91,12 @@
         </div>
       </div>
     </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script>
+      $('#leftContent .panel-heading').on('click',function(){
+        $('#leftContent .panel-heading').css("background","#ccc");
+        $('#leftContent a.collapsed').css("color","#337ab7");
+        $(this).css("background","#337ab7","color","red");
+        $(this).find("a.collapsed").css("color","#fff"); 
+      })
+    </script>

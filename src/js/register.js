@@ -1,7 +1,7 @@
 $(function () {/* 文档加载，执行一个函数*/
     $('[data-toggle="popover"]').popover()
     $('#register').bootstrapValidator({
-        message: 'This value is not valid',
+        message: 'This value is not valid', 
         feedbackIcons: {/*input状态样式图片*/
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',

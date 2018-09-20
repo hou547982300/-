@@ -31,7 +31,7 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-  <script src="./lib/jquery/jquery.min.js"></script>
+  <!-- <script src="./lib/jquery/jquery.min.js"></script> -->
   <script>
     $.get('./api/checkIsLogin.php',function(data){
         if(data.Loginstatus){

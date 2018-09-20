@@ -31,7 +31,7 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-  <script src="./lib/jquery/jquery.min.js"></script>
+  <!-- <script src="./lib/jquery/jquery.min.js"></script> -->
   <script>
     var c =location.href;
     console.log("网址",c);

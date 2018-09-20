@@ -38,11 +38,11 @@
           
             <div class="panel-body row">
               <div class="col-md-6 col-xs-12 ">
-              <form class="form-inline" id="borrow_apply">
+              <form class="form-inline" id="borrowApply">
                 <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款金额</label>
                   <div class="input-group col-sm-9 col-xs-12">
-                    <input type="text" class="form-control"   name="bidRequestAmount" >
+                    <input type="text" class="form-control"  name="borrowAmount" >
                     <div class="input-group-addon">元</div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款类型</label>
                   <div class="input-group col-sm-9 col-xs-12">
-                    <select id="bidRequeststyle" name="bidRequeststyle" class="form-control"  style="padding-left:140px;padding-right:30px;text-align:center">
+                    <select id="bidRequeststyle" name="borrowType" class="form-control"  style="padding-left:140px;padding-right:30px;text-align:center">
                       <option value="1">信用贷</option>
                       <option value="2">车易贷</option>
                       <option value="3">房易贷</option>
@@ -83,15 +83,23 @@
                 <div class="form-group" style="width:90%">
                   <label for="inputEmail3" class="col-sm-3  col-xs-12">还款方式</label>
                   <div class="input-group col-sm-9 col-xs-12" style="line-height:34px;text-align:left;" >
-                    <input type="radio" name="inlineRadioOptions"  id=""  >按月分期
-                    <input type="radio" name="inlineRadioOptions"  id="" style="margin-left:30px">按月到期
+                    <input type="radio" name="repayment"  checked  value="按月分期" >按月分期
+                    <input type="radio" name="repayment"  style="margin-left:30px" value="按月到期" >按月到期
                   </div>
                 </div>
                 <!-- 最小投标 -->
                 <div class="form-group" >
                 <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">最小投标</label>
                   <div class="input-group col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" name="minBidAmount" >
+                    <input type="text" class="form-control" name="minAmount" >
+                    <div class="input-group-addon">元</div>
+                  </div>
+                </div>
+                 <!-- 最大投标 -->
+                 <div class="form-group" >
+                <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">最大投标</label>
+                  <div class="input-group col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" name="maxAmount" >
                     <div class="input-group-addon">元</div>
                   </div>
                 </div>
@@ -99,7 +107,7 @@
                 <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">投标奖金</label>
                   <div class="input-group col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" name="totalRewardAmount"  >
+                    <input type="text" class="form-control" name="rewardAmount"  >
                     <div class="input-group-addon">%</div>
                   </div>
                 </div>
@@ -121,7 +129,7 @@
                 <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 col-xs-12 control-label">借款标题</label>
                   <div class="input-group col-sm-9">
-                    <input type="text" class="form-control" name="title"  >
+                    <input type="text" class="form-control" name="borrowTitle"  >
                     <div class="input-group-addon" style="background:none;border:none"></div>
                 </div>
                   
@@ -133,7 +141,7 @@
                       <textarea name="description" id="" cols="50" rows="3" class="form-control" ></textarea>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-sm btn-primary">提交申请</button>
+                <button type="button" id="subminrequest" class="btn btn-sm btn-primary">提交申请</button>
               </form>
               </div>
               <div class="col-md-4 col-xs-10" id="borrow_appy_about">
@@ -149,7 +157,7 @@
   <!-- 页脚 -->
   <?php
         require("./footer.php");
-    ?>
+  ?>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrapValidator/js/bootstrapValidator.min.js"></script>
